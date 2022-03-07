@@ -10,6 +10,7 @@ colorama==0.4.4
 Deprecated==1.2.13
 Django==3.2.12
 django-celery-beat==2.2.1
+django-celery-results==2.3.0
 django-timezone-field==4.2.3
 kombu==5.2.4
 packaging==21.3

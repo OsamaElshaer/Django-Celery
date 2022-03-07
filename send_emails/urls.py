@@ -5,5 +5,6 @@ from . import views
 
 urlpatterns = [
     
-    path('' , views.send_mails , name='sendmails')
+    path('normalsendemails' , views.send_mails , name='sendmails'),
+    path('schedulsendmails' , views.schedulsend_mails , name='schedulsendmails')
 ]

@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app1',
     'django_celery_beat',
-    'send_emails'
+    'django_celery_results',
+    'send_emails',
 ]
 
 MIDDLEWARE = [
@@ -138,7 +139,7 @@ CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
 CELERY_BEAT_SCHEDULE = {
 
         'task-first': {
-        'task': 'app1.tasks.test_func',
+        'task': 'send_emails.tasks.schedul_send_emails',
         'schedule':10
        },
 }
@@ -150,8 +151,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com' 
 EMAIL_PORT = 587 
 EMAIL_USE_TLS = True 
-EMAIL_HOST_USER = 'osamaelshaer944@gmail.com'
-EMAIL_HOST_PASSWORD = 'mjyahzmduxmukmnl'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 
-# Custom setting. To email
-# RECIPIENT_ADDRESS = ''
