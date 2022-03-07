@@ -1,4 +1,3 @@
-from re import T
 from project.celery import app
 
 @app.task(bind=True)

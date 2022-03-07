@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app1',
-    'django_celery_beat'
+    'django_celery_beat',
+    'send_emails'
 ]
 
 MIDDLEWARE = [
@@ -141,3 +142,16 @@ CELERY_BEAT_SCHEDULE = {
         'schedule':10
        },
 }
+
+# EmailProject/settings.py
+
+# Bottom of the file
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' 
+EMAIL_HOST = 'smtp.gmail.com' 
+EMAIL_PORT = 587 
+EMAIL_USE_TLS = True 
+EMAIL_HOST_USER = 'osamaelshaer944@gmail.com'
+EMAIL_HOST_PASSWORD = 'mjyahzmduxmukmnl'
+
+# Custom setting. To email
+# RECIPIENT_ADDRESS = ''
